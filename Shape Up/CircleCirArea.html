@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>CircleCirArea</title>
+  <style>
+  h1{
+    font-family: "Arial Black",Gadget, sans-serif;
+    font-size: 50px;
+  }
+  
+  p{
+    font-family: "Arial";
+    font-size: 20px;
+  }
+  
+  button{
+    font-family: "Arial Black";
+  }
+  
+</style>
+
+<script type="text/javascript">
+
+function circumference ()
+{
+  var radius = parseInt(document.getElementById('radius').value);
+  document.getElementById('outputDiv').innerHTML = (2 * Math.PI * radius);
+}
+
+function area ()
+{
+  var radius = parseInt(document.getElementById('radius').value);
+  document.getElementById('outputDiv2').innerHTML = (Math.PI * radius * radius);
+}
+</script>
+</head>
+<body>
+  <h1>Calculate a Circle's Circumference and Area!</h1>
+  
+  <p>Enter in the Radius to
+    calculate the Circumference and Area.</p>
+    
+    Radius(r):
+    <input type="text" id="radius">
+    <br><br>
+    
+    <button type="button"
+    onclick="circumference()">Calculate Circumference</button>
+    <button type="button"
+    onclick="area()">Calculate Area</button>
+    
+    <p>Circumference (2 x pi x r)=</p> <div id="outputDiv"></div>
+    
+    
+    <p>Area (pi x r^2)=</p> <div id="outputDiv2"></div>
+  </body>
+  </html>

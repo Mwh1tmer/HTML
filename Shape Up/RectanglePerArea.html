@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>RectanglePerArea</title>
+  <style>
+    h1{
+    font-family: "Arial Black",Gadget, sans-serif;
+    font-size: 40px;
+    }
+    
+    p{
+    font-family: "Arial";
+    font-size: 20px;
+    }
+    
+    button{
+    font-family: "Arial Black";
+    }
+    
+  </style>
+    <script type="text/javascript">
+    
+    function area ()
+    {
+      var length = parseInt(document.getElementById('length').value);
+      var width = parseInt(document.getElementById('width').value);
+     document.getElementById('outputDiv').innerHTML = (length * width);
+    }
+    function perimeter ()
+    {
+    var length = parseInt(document.getElementById('length').value);
+    var width = parseInt(document.getElementById('width').value);
+    document.getElementById('outputDiv2').innerHTML = (2 * length) + (2 * width);
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Calculate a Rectangle's Perimeter and Area!</h1>
+    <p>Enter in Length and Width to
+       calculate the Perimeter and Area.</p>
+  <br>
+      Length:
+  <input type="text" id="length">
+  <br><br>
+
+  
+      Width:
+  <input type="text" id="width">
+ <br><br>
+
+<button type="button"
+    onclick="area()">Calculate Area</button>
+  
+  
+    
+ 
+  <p>Area (L x W) = <div id="outputDiv"></div></p>
+  <button type="button"
+    onclick="perimeter()">Calculate Perimeter</button> 
+  <p>Perimeter (2 x L) + (2 x W) =<div id="outputDiv2"></div></p>
+</body>
+</html>
