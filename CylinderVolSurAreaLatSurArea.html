@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>CylinderVolSurAreaLatSurArea</title>
+  <style>
+  h1{
+    font-family: "Arial Black",Gadget, sans-serif;
+    font-size: 40px;
+  }
+  
+  p{
+    font-family: "Arial";
+    font-size: 20px;
+  }
+  
+  button{
+    font-family: "Arial Black";
+  }
+  
+</style>
+
+<script type="text/javascript">
+
+function lateralSurfaceArea ()
+{
+  var height = parseInt(document.getElementById('height').value);
+  var radius = parseInt(document.getElementById('radius').value);
+  document.getElementById('outputDiv').innerHTML = (2 * Math.PI * radius * height);
+}
+
+function surfaceArea ()
+{
+  var height = parseInt(document.getElementById('height').value);
+  var radius = parseInt(document.getElementById('radius').value);
+  document.getElementById('outputDiv2').innerHTML = 
+                  (2 * Math.PI * radius * height) + (2 * Math.PI * radius * radius);
+}
+
+function volume ()
+{
+  var height = parseInt(document.getElementById('height').value);
+  var radius = parseInt(document.getElementById('radius').value);
+  document.getElementById('outputDiv3').innerHTML = (Math.PI * radius * radius * (height));
+}
+</script>
+</head>
+<body>
+  <h1>Calculate a Cylinder's Volume, Surface Area, and Lateral Surface Area!</h1>
+  
+  <p>Enter in the Radius and Height
+    calculate the Volume, Surface Area, and Lateral Surface Area.</p>
+    
+    Height(h):
+    <input type="text" id="height">
+    <br><br>
+
+    Radius(r):
+    <input type="text" id="radius">
+    <br><br>
+    
+    <button type="button"
+    onclick="lateralSurfaceArea()">Calculate Lateral Surface Area</button>
+    <button type="button"
+    onclick="surfaceArea()">Calculate Surface Area</button>
+    <button type="button"
+    onclick="volume()">Calculate Volume</button>
+    
+    <p>Lateral Surface Area (2 x pi x r x h)=</p> <div id="outputDiv"></div>
+    <p>Surface Area (2 x pi x r x h) + (2 x pi x r x r)=</p> <div id="outputDiv2"></div>
+    <p>Volume (pi x r x r x (h))=</p> <div id="outputDiv3"></div>
+  </body>
+  </html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>TrapezoidPerArea</title>
+  <style>
+  h1{
+    font-family: "Arial Black",Gadget, sans-serif;
+    font-size: 40px;
+  }
+  
+  p{
+    font-family: "Arial";
+    font-size: 20px;
+  }
+  
+  button{
+    font-family: "Arial Black";
+  }
+  
+</style>
+
+<script type="text/javascript">
+
+function area ()
+{
+  var height = parseInt(document.getElementById('height').value);
+  var LBase = parseInt(document.getElementById('LBase').value);
+  var base = parseInt(document.getElementById('base').value);
+  document.getElementById('outputDiv').innerHTML = (height / 2) * (LBase + base);
+}
+
+function perimeter ()
+{
+  var LBase = parseInt(document.getElementById('LBase').value);
+  var base = parseInt(document.getElementById('base').value);
+  var RightSide = parseInt(document.getElementById('RightSide').value);
+  var LeftSide = parseInt(document.getElementById('LeftSide').value);
+  document.getElementById('outputDiv2').innerHTML =  RightSide + LBase + LeftSide + base;
+ 
+}
+</script>
+</head>
+<body>
+  <h1>Calculate a Trapezoid's Perimeter and Area!</h1>
+  
+    <p>Enter in the Right Side, the Left Side, the Smaller Base, the Larger Base, and the Height to
+        calculate the Perimeter and Area.</p>
+    <br>
+    Right Side(RS):
+    <input type="text" id="RightSide">
+    <br><br>
+    
+    Left Side(LS):
+    <input type="text" id="LeftSide">
+    <br><br>
+    
+    Smaller Base(b):
+    <input type="text" id="base">
+    <br><br>
+     
+     Height(H):
+    <input type="text" id="height">
+    <br><br>
+    
+    Larger Base(B):
+    <input type="text" id="LBase">
+    <br><br>
+    
+    <button type="button"
+    onclick="area()">Calculate Area</button>
+     <button type="button"
+    onclick="perimeter()">Calculate Perimeter</button>
+    
+    <p>Area (H / 2) * (B + b) =</p> <div id="outputDiv"></div>
+    
+    
+    <p>Perimeter (b + RS + LS + B) =</p> <div id="outputDiv2"></div>
+  </body>
+  </html>

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>TrianglePerArea</title>
+  <style>
+  h1{
+    font-family: "Arial Black",Gadget, sans-serif;
+    font-size: 40px;
+  }
+  
+  p{
+    font-family: "Arial";
+    font-size: 20px;
+  }
+  
+  button{
+    font-family: "Arial Black";
+  }
+  
+</style>
+
+<script type="text/javascript">
+
+function area ()
+{
+  var height = parseInt(document.getElementById('height').value);
+  var base = parseInt(document.getElementById('base').value);
+  document.getElementById('outputDiv').innerHTML = ((base / 2) * height);  
+}
+
+function perimeter ()
+{
+  var sideOne = parseInt(document.getElementById('sideOne').value);
+  var sideTwo = parseInt(document.getElementById('sideTwo').value);
+  var base = parseInt(document.getElementById('base').value);
+  document.getElementById('outputDiv2').innerHTML = sideOne + base + sideTwo;
+}
+
+</script>
+</head>
+<body>
+  <h1>Calculate a Triangle's Perimeter and Area!</h1>
+  
+  <p>Enter in Side One, Side Two, the Base, and the Height to
+    calculate the Perimeter and Area.</p>
+    
+    Side One(S1):
+    <input type="text" id="sideOne">
+    <br><br>
+    
+    Side Two(S2):
+    <input type="text" id="sideTwo">
+    <br><br>
+    
+    Base(B):
+    <input type="text" id="base">
+    <br><br>
+    
+    Height(H):
+    <input type="text" id="height">
+    <br><br>
+    
+    
+    <button type="button"
+    onclick="area()">Calculate Area</button>
+    <button type="button"
+    onclick="perimeter()">Calculate Perimeter</button>
+    
+    <p>Area ((B / 2) * H) =</p> <div id="outputDiv"></div>
+    
+    
+    <p>Perimeter (S1 + B + S2) =</p> <div id="outputDiv2"></div>
+  </body>
+  </html>

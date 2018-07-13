@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>RectangleSolidVolSurfArea</title>
+  <style>
+  h1{
+    font-family: "Arial Black",Gadget, sans-serif;
+    font-size: 40px;
+  }
+  
+  p{
+    font-family: "Arial";
+    font-size: 20px;
+  }
+  
+  button{
+    font-family: "Arial Black";
+  }
+  
+</style>
+
+<script type="text/javascript">
+
+function surfaceArea ()
+{
+  var length = parseInt(document.getElementById('length').value);
+  var width = parseInt(document.getElementById('width').value);
+  var height = parseInt(document.getElementById('height').value);
+  document.getElementById('outputDiv').innerHTML =
+  ((2 * length * width) + (2 * width * height) + (2 * length * height));
+}
+
+function volume ()
+{
+  var length = parseInt(document.getElementById('length').value);
+  var width = parseInt(document.getElementById('width').value);
+  var height = parseInt(document.getElementById('height').value);
+  document.getElementById('outputDiv2').innerHTML = (length * width * height);
+}
+</script>
+</head>
+<body>
+  <h1>Calculate a Rectangular Solid's Surface Area and Volume!</h1>
+  
+  <p>Enter in the Length, the Width, and the Height to
+    calculate the Surface Area and Volume.</p>
+    
+    Length(L):
+    <input type="text" id="length">
+    <br><br>
+    
+    Width(W):
+    <input type="text" id="width">
+    <br><br>
+    
+    Height(H):
+    <input type="text" id="height">
+    <br><br>
+    
+    <button type="button"
+    onclick="surfaceArea()">Calculate Surface Area</button>
+    <button type="button"
+    onclick="volume()">Calculate Volume</button>
+    
+    <p>Surface Area (2xLxW)+(2xWxH)+(2xLxH)=</p> <div id="outputDiv"></div>
+    
+    <p>Volume (L x W x H)=</p> <div id="outputDiv2"></div>
+  </body>
+  </html>
